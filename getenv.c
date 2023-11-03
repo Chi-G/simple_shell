@@ -19,7 +19,8 @@ char **get_environ(info_t *info)
 
 /**
  * _unsetenv - Remove an environment variable
- * @info: Structure containing potential arguemets. Used to maintain constant function prototype.
+ * @info: Structure containing potential arguemets. Used to maintain
+ * constant function prototype.
  * Return: 1 on delete, 0 otherwise
  * @var: the string env var property
  */
