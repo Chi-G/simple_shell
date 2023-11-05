@@ -111,7 +111,13 @@ void find_cmd(info_t *info)
 		if ((interactive(info) || _getenv(info, "PATH=")
 					|| info->argv[0][0] == '\') && is_cmd(info, info->argv[0]))
 			fork_cmd(info);
-		else if
+		else if (*(info->arg) != '\n')
+		{
+			infor->status = 127;
+			print_error(info, "not found\n");
+		}
+	}
+}
 
 
 
