@@ -58,7 +58,7 @@ typedef struct liststr
  * @argc: the arg count
  * @line_count: the error count
  * @err_num: the error code for exit()s
- * @linecounts_flag: when on count this file of input
+ * @linecount_flag: when on count this file of input
  * @fname: the program filename
  * @env: linked list local copy of environ
  * @environ: custom modified copy of environ from LL env
@@ -94,8 +94,9 @@ typedef struct passinfo
 	int cmd_buf_type;
 } info_t;
 
-#define INFO_INIT \ 
-{NULL, NULL NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \ 0, 0, 0}
+#define INFO_INIT \
+{NULL, NULL NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+	0, 0, 0}
 
 /**
  * struct builtin - contains a builtin string and related func
