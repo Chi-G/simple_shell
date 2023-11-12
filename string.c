@@ -9,9 +9,10 @@
 int _strlen(char *s)
 {
 	int i = 0;
+
 	if (!s)
 		return (0);
-	
+
 	while (*s++)
 		i++;
 	return (i);
@@ -53,7 +54,7 @@ char *starts_with(const char *haystack, const char *needle)
 	while (*needle)
 		if (*needle++ != *hatstack++)
 			return (NULL);
-	return ((char*)haystack);
+	return ((char *)haystack);
 }
 
 /**
@@ -61,7 +62,7 @@ char *starts_with(const char *haystack, const char *needle)
  * @dest: this the destination of buffer
  * @src: This is the source of the buffer
  *
- * return: the ponter to destination buffer
+ * Return: the ponter to destination buffer
  */
 char *_strcat(char *dest, char *src)
 {
