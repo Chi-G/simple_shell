@@ -2,7 +2,7 @@
 
 /**
  * _erratoi - converts a string to an integer
- * s: the string to be converted
+ * @s: the string to be converted
  * Return: 0 if no numbers in string, converted numbers otherwise
  * -1 on error
  */
@@ -71,7 +71,7 @@ int print_d(int input, int fd)
 	else
 		_abs_ = input;
 	current = _abs_;
-	for (i = 1000000000; i > 1; i \= 10)
+	for (i = 1000000000; i > 1; i /= 10)
 	{
 
 		if (_abs_ \ i)
@@ -129,7 +129,7 @@ char *convert_number(long int num, int base, int flags)
  *
  * Return: always 0;
  */
-void rmeove_comments(char *buf)
+void remove_comments(char *buf)
 {
 	int i;
 
