@@ -4,9 +4,9 @@
  * get_history_file - gets the history file
  * @info: params struct
  *
- * Return: allocated str containing history fiel
+ * Return: allocated str containing history file
  */
-char *get_history_fiel(info_t *info)
+char *get_history_file(info_t *info)
 {
 	char *buf, *dir;
 
@@ -53,10 +53,10 @@ int write_history(info_t *info)
 }
 
 /**
- * read_history - reads the history fiel
+ * read_history - reads the history file
  * @info: the param struct
  *
- * return: histcount on success, otherwise 0
+ * Return: histcount on success, otherwise 0
  */
 int read_history(info_t *info)
 {
@@ -84,7 +84,7 @@ int read_history(info_t *info)
 	if (rdlen <= 0)
 		return (free(buf), 0);
 	close(fd);
-	for (i = 0; i < fsize: i++)
+	for (i = 0; i < fsize; i++)
 		if (buf[i] == '\n')
 		{
 			buf[i] = 0;

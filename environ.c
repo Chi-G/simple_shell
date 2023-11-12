@@ -57,7 +57,7 @@ int _mysetenv(info_t *info)
  * _myunsetenv - removes an env var
  * @info: structure containing potential args. used to maintain
  * constant function prototype
- * return: always 0 on success, 1 on failure
+ * Return: always 0 on success, 1 on failure
  */
 int _myunsetenv(info_t *info)
 {
