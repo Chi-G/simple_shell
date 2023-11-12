@@ -23,9 +23,10 @@ int is_cmd(info_t *info, char *path)
 }
 
 /**
- * dup_char - it duplicates the characters
+ * dup_chars - it duplicates the characters
  * @pathstr: this is the PATH string
  * @start: it is the starting index
+ * @stop: put a stop to index
  *
  * Return: pointer to new buffer
  */
