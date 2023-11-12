@@ -20,7 +20,7 @@ return (i);
 
 /**
  * list_to_strings - it returns an array of strings of the list->str
- * @ead: thr pointer to first node
+ * @head: thr pointer to first node
  *
  * Return: array of strings
  */
@@ -79,7 +79,7 @@ size_t print_list(const list_t *h)
 }
 
 /**
- * node_start_with -it return node whose string startsvwith prefix
+ * node_starts_with -it return node whose string startsvwith prefix
  * @node: pointer to list head
  * @prefix: the string to match
  * @c: it is the next character after prefix to match
