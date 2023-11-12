@@ -102,14 +102,14 @@ int read_history(info_t *info)
 }
 
 /**
- * build_history_list - adds entry to a hsitory linked list
+ * build_history_list - adds entry to a history linked list
  * @info: the struct conttaining potential args. used to mainatain
  * @buf: buffer
  * @linecount: the history linecount, hsitcount
  *
  * Return: always 0
  */
-int build_history_list(inf_t *info, char *buf, int lineocunt)
+int build_history_list(inf_t *info, char *buf, int linecount)
 {
 	list_t *node = NULL;
 
@@ -126,7 +126,7 @@ int build_history_list(inf_t *info, char *buf, int lineocunt)
  * renumber_history - renumbers the history linked list after changes
  * @info: the struct containing potential args. used to maintain
  *
- * Retrun: the new histcount
+ * Return: the new histcount
  */
 int renumber_history(info_t *info)
 {
