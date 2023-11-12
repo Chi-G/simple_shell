@@ -57,7 +57,7 @@ ssize_t get_input(info_t *info)
 
 	_putchar(BUF_FLUSH);
 	r =  input_buf(info, &buf, &len);
-	if (r = -1)
+	if (r == -1)
 		return (-1);
 	if (len)
 	{
@@ -119,7 +119,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;
 	size_t k;
-	ssize_t r = 0, s= 0;
+	ssize_t r = 0, s = 0;
 	char *p = NULL, *new_p = NULL, *c;
 
 	p = *ptr;
@@ -129,7 +129,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 		i = len = 0;
 
 	r = read_buf(info, buf, &len);
-	if (r == -1 || (r == && len == 0))
+	if (r == -1 || (r == 0 && len == 0))
 		return (-1);
 
 	c = _strchr(buf + i, '\n');
@@ -154,7 +154,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 }
 
 /**
- * sigintHnadler - blocks ctr-C
+ * sigintHandler - blocks ctr-C
  * @sig_num: the signal number
  *
  * Return: void
