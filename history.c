@@ -39,7 +39,7 @@ int write_history(info_t *info)
 		return (-1);
 
 	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);
-	free(fielname);
+	free(filename);
 	if (fd == -1)
 		return (-1);
 	for (node = info->history; node; node = node->next)
@@ -109,7 +109,7 @@ int read_history(info_t *info)
  *
  * Return: always 0
  */
-int build_history_list(inf_t *info, char *buf, int linecount)
+int build_history_list(info_t *info, char *buf, int linecount)
 {
 	list_t *node = NULL;
 
@@ -130,7 +130,7 @@ int build_history_list(inf_t *info, char *buf, int linecount)
  */
 int renumber_history(info_t *info)
 {
-	list_t *node = node->history;
+	list_t *node = info->history;
 	int i = 0;
 
 	while (node)
