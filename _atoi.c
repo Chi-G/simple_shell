@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * interactive - return true if shell is interactive mode
+ * interactive - it return true if shell is interactive mode
  * @info: struct address
  *
  * Return: 1 if interactive mode, 0 otherwise
@@ -12,7 +12,7 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - checks if character is a delimeter
+ * is_delim - it checks if character is a delimeter
  * @c: the char to check
  * @delim:the delimeter string
  * Return: 1 if true, 0 if false
@@ -26,7 +26,7 @@ int is_delim(char c, char *delim)
 }
 
 /**
- * _isalpha - check for alphabetic character
+ * _isalpha - it check for alphabetic character
  * @c: The character to input
  * *Return: 1 if c is alphabetic, 0 otherwise
  */
