@@ -181,7 +181,7 @@ int _myalias(info_t *);
 /* toem_getline.c */
 ssize_t get_input(info_t *);
 int _getline(info_t *, char **, size_t *);
-void signintHandler(int);
+void sigintHandler(int);
 
 /* toem_getinfo.c */
 void clear_info(info_t *);
@@ -225,7 +225,7 @@ ssize_t get_node_index(list_t *, list_t *);
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
-int replace_vars(info_t);
+int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
