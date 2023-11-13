@@ -29,13 +29,13 @@ void _eputs(char *str)
 int _eputchar(char c)
 {
 	static int i;
-	static char but[WRITE_BUF_SIZE];
+	static char buf[WRITE_BUF_SIZE];
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		int ret = write(2, buf, i);
 		(void)ret;
-		1 = 0;
+		i = 0;
 	}
 	if (c != BUF_FLUSH)
 		buf[i++] = c;
@@ -50,7 +50,7 @@ int _eputchar(char c)
  * Return: on success 1
  * on error, -1 is returned, and errno is set accordingly
  */
-nt _putfd(char c, int fd)
+int _putfd(char c, int fd)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
