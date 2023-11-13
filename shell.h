@@ -109,10 +109,10 @@ typedef struct builtin
 	int (*func)(info_t *);
 } builtin_table;
 
-/* toem_shloop.c */
+/* toem_shell_loop.c */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
-void find_cmd(info_t);
+void find_cmd(info_t *);
 void fork_cmd(info_t *);
 
 /* toem_parser.c */
