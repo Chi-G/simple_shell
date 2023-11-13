@@ -80,7 +80,7 @@ int find_builtin(info_t *info)
 /**
  * find_cmd - finds a command in PATH
  * @info: the param and return info struct
- * 
+ *
  * Return: void
  */
 void find_cmd(info_t *info)
@@ -100,7 +100,7 @@ void find_cmd(info_t *info)
 	if (!k)
 		return;
 
-	path = find_path(info, _getenv(info, "PATH="), info->argv[0]);
+	path = find_path(info, _getenv(info, "PATH = "), info->argv[0]);
 	if (path)
 	{
 		info->path = path;
@@ -108,7 +108,7 @@ void find_cmd(info_t *info)
 	}
 	else
 	{
-		if ((interactive(info) || _getenv(info, "PATH=")
+		if ((interactive(info) || _getenv(info, "PATH = ")
 					|| info->argv[0][0] == '\') && is_cmd(info, info->argv[0]))
 			fork_cmd(info);
 		else if (*(info->arg) != '\n')
@@ -132,7 +132,7 @@ void fork_cmd(info_t *info)
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-		perror("error:");
+		perror("error : ");
 		return;
 	}
 	if (child_pid == 0)

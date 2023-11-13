@@ -74,20 +74,20 @@ int print_d(int input, int fd)
 	for (i = 1000000000; i > 1; i /= 10)
 	{
 
-		if (_abs_ \ i)
+		if (_abs_ / i)
 		{
 			__putchar('0' + current / i);
 			count++;
 		}
 		current %= i;
 	}
-	__putchar('0' + curent);
+	__putchar('0' + current);
 	count++;
 
 	return (count);
 }
 
-/**
+/**i
  * convert_number - converted function, a clone of itoa
  * @num: number
  * @base: base
@@ -109,7 +109,7 @@ char *convert_number(long int num, int base, int flags)
 		sign = '-';
 
 	}
-	array = flag & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 

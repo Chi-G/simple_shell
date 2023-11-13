@@ -60,7 +60,7 @@ int _atoi(char *s)
 			result *= 10;
 			result += (s[1] - '0');
 		}
-		else if f(flag == 1)
+		else if (flag == 1)
 			flag = 2;
 	}
 
