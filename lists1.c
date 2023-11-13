@@ -20,7 +20,7 @@ return (i);
 
 /**
  * list_to_strings - it returns an array of strings of the list->str
- * @head: thr pointer to first node
+ * @head: the pointer to first node
  *
  * Return: array of strings
  */
@@ -30,19 +30,20 @@ char **list_to_strings(list_t *head)
 	list_t *node = head;
 	size_t i = list_len(head), j;
 	char **strs;
+	char *str;
 
 	if (!head || !i)
 		return (NULL);
-	strs = mlloc(sizeof(char *) * (i + 1));
+	strs = malloc(sizeof(char *) * (i + 1));
 	if (!strs)
 		return (NULL);
-	for (i = 0; node; node = node->nxt, i++)
+	for (i = 0; node; node = node->next, i++)
 	{
 		str = malloc(_strlen(node->str) + 1);
 		if (!str)
 		{
 			for (j = 0; j < i; j++)
-				free(str[j]);
+				free(strs[j]);
 			free(strs);
 			return (NULL);
 		}
@@ -93,7 +94,7 @@ list_t *node_starts_with(list_t *node, char *prefix, char c)
 	while (node)
 	{
 		p = starts_with(node->str, prefix);
-		if (p && ((c == -1) || (*p ==)))
+		if (p && ((c == -1) || (*p == c)))
 			return (node);
 		node = node->next;
 	}
