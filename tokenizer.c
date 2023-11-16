@@ -82,12 +82,12 @@ char **strtow2(char *str, char d)
 					k++;
 				s[j] = malloc((k + 1) * sizeof(char));
 				if (!s[j])
-					{
-						for (k = 0; k < j; k++)
-							free(s[k]);
-						free(s);
-						return (NULL);
-					}
+				{
+					for (k = 0; k < j; k++)
+						free(s[k]);
+					free(s);
+					return (NULL);
+				}
 				for (m = 0; m < k; m++)
 					s[j][m] = str[i++];
 				s[j][m] = 0;
