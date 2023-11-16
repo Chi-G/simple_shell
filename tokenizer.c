@@ -74,9 +74,9 @@ char **strtow2(char *str, char d)
 		if (!s)
 			return (NULL);
 		for (i = 0, j = 0; j < numwords; j++)
-			{
-				while (str[i] == d && str[i] != d)
-					i++;
+		{
+			while (str[i] == d && str[i] != d)
+				i++;
 				k = 0;
 				while (str[i + k] != d && str[i + k] && str[i + k] != d)
 					k++;
