@@ -20,5 +20,4 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 This command compiles all the `.c` files in the directory and generates an executable file named `hsh`. The flags specified (`-Wall`, `-Werror`, `-Wextra`, `-pedantic`, `-std=gnu89`) are used for additional warning and error checking during the compilation process, ensuring that the code adheres to specific standards and best practices.
 
 AUTHORS:
-Nwokeohuru chijindu Chibuike
-Chukwudalu chinemere
+Nwokeohuru chijindu Chibuike, Chukwudalu chinemere Emmanuel.
