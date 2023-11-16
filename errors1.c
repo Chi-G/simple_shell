@@ -87,7 +87,7 @@ int print_d(int input, int fd)
 	return (count);
 }
 
-/**i
+/**
  * convert_number - converted function, a clone of itoa
  * @num: number
  * @base: base
